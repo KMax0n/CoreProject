@@ -8204,6 +8204,18 @@
 		{
 			"Path": "$(ProjectDir)/Plugins/DebugSystem/Binaries/Win64/UnrealEditor-Win64-DebugGame.modules",
 			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/HealthSystem/Binaries/Win64/UnrealEditor-HealthSystem-Win64-DebugGame.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/HealthSystem/Binaries/Win64/UnrealEditor-HealthSystem-Win64-DebugGame.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/HealthSystem/Binaries/Win64/UnrealEditor-Win64-DebugGame.modules",
+			"Type": "RequiredResource"
 		}
 	],
 	"RuntimeDependencies": [
@@ -33950,6 +33962,10 @@
 		{
 			"Path": "$(ProjectDir)/Plugins/DebugSystem/DebugSystem.uplugin",
 			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/HealthSystem/HealthSystem.uplugin",
+			"Type": "UFS"
 		}
 	],
 	"BuildPlugins": [
@@ -34047,6 +34063,7 @@
 		"GoogleCloudMessaging",
 		"GooglePAD",
 		"HairStrands",
+		"HealthSystem",
 		"HoldoutComposite",
 		"IKRig",
 		"IOSDeviceProfileSelector",
