@@ -1,0 +1,9 @@
+# UnrealEngine files to ignore
+Intermediate
+Saved
+
+# solution files to ignore
+*.sln
+.vs
+.idea
+.vsconfig
