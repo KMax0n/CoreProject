@@ -8216,6 +8216,30 @@
 		{
 			"Path": "$(ProjectDir)/Plugins/HealthSystem/Binaries/Win64/UnrealEditor-Win64-DebugGame.modules",
 			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/MeleeSystem/Binaries/Win64/UnrealEditor-MeleeSystem-Win64-DebugGame.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/MeleeSystem/Binaries/Win64/UnrealEditor-MeleeSystem-Win64-DebugGame.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/MeleeSystem/Binaries/Win64/UnrealEditor-Win64-DebugGame.modules",
+			"Type": "RequiredResource"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/MovementSystem/Binaries/Win64/UnrealEditor-MovementSystem-Win64-DebugGame.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/MovementSystem/Binaries/Win64/UnrealEditor-MovementSystem-Win64-DebugGame.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/MovementSystem/Binaries/Win64/UnrealEditor-Win64-DebugGame.modules",
+			"Type": "RequiredResource"
 		}
 	],
 	"RuntimeDependencies": [
@@ -33966,6 +33990,14 @@
 		{
 			"Path": "$(ProjectDir)/Plugins/HealthSystem/HealthSystem.uplugin",
 			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/MeleeSystem/MeleeSystem.uplugin",
+			"Type": "UFS"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/MovementSystem/MovementSystem.uplugin",
+			"Type": "UFS"
 		}
 	],
 	"BuildPlugins": [
@@ -34086,6 +34118,7 @@
 		"MediaCompositing",
 		"MediaPlate",
 		"MediaPlayerEditor",
+		"MeleeSystem",
 		"MeshLODToolset",
 		"MeshModelingToolset",
 		"MeshModelingToolsetExp",
@@ -34095,6 +34128,7 @@
 		"MobileLauncherProfileWizard",
 		"MobilePatchingUtils",
 		"ModelingToolsEditorMode",
+		"MovementSystem",
 		"MsQuic",
 		"N10XSourceCodeAccess",
 		"NFORDenoise",
