@@ -7,3 +7,7 @@ Saved
 .vs
 .idea
 .vsconfig
+
+# archives
+*.zip
+*.rar
