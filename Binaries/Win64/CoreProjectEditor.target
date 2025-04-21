@@ -8218,6 +8218,18 @@
 			"Type": "RequiredResource"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/InteractionSystem/Binaries/Win64/UnrealEditor-InteractionSystem.dll",
+			"Type": "DynamicLibrary"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/InteractionSystem/Binaries/Win64/UnrealEditor-InteractionSystem.pdb",
+			"Type": "SymbolFile"
+		},
+		{
+			"Path": "$(ProjectDir)/Plugins/InteractionSystem/Binaries/Win64/UnrealEditor.modules",
+			"Type": "RequiredResource"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/InventorySystem/Binaries/Win64/UnrealEditor-InventorySystem.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -34004,6 +34016,10 @@
 			"Type": "UFS"
 		},
 		{
+			"Path": "$(ProjectDir)/Plugins/InteractionSystem/InteractionSystem.uplugin",
+			"Type": "UFS"
+		},
+		{
 			"Path": "$(ProjectDir)/Plugins/InventorySystem/InventorySystem.uplugin",
 			"Type": "UFS"
 		},
@@ -34117,6 +34133,7 @@
 		"IOSDeviceProfileSelector",
 		"ImgMedia",
 		"InputDebugging",
+		"InteractionSystem",
 		"Interchange",
 		"InterchangeAssets",
 		"InterchangeEditor",
