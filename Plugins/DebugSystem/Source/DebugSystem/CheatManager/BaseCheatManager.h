@@ -13,9 +13,13 @@ UCLASS()
 class DEBUGSYSTEM_API UBaseCheatManagerExtension : public UCheatManagerExtension
 {
 	GENERATED_BODY()
-
+	
 	UFUNCTION(BlueprintPure, Category = "Debug")
 	AActor* GetSelectedActor() const;
+	
+public:
+	UFUNCTION(BlueprintImplementableEvent, DisplayName = "GetActorForDebug", Category = "Debug")
+	AActor* K2_GetActorForDebug();
 };
 
 UCLASS()
@@ -25,9 +29,12 @@ class DEBUGSYSTEM_API UBaseCheatManager : public UCheatManager
 
 public:
 	virtual void InitCheatManager() override;
+
+	UFUNCTION(BlueprintImplementableEvent, DisplayName = "GetActorForDebug", Category = "Debug")
+	AActor* K2_GetActorForDebug();
 	
 	UFUNCTION(BlueprintPure, Category = "Debug")
-	AActor* GetSelectedActor();
+	virtual AActor* GetSelectedActor();
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Debug")
 	TArray<TSubclassOf<UBaseCheatManagerExtension>> CheatExtensionsClasses;

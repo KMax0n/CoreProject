@@ -12,8 +12,8 @@ AActor* UBaseCheatManagerExtension::GetSelectedActor() const
 {
 	if (auto* Manager = Cast<UBaseCheatManager>(GetOuterUCheatManager()))
 	{
-		if (Manager->GetSelectedActor())
-			return Manager->GetSelectedActor();
+		const auto SelectedActor = Manager->K2_GetActorForDebug();
+		return SelectedActor ? SelectedActor : Manager->GetSelectedActor();
 	}
 
 	const AActor* PlayerActor = GetPlayerController()->GetPawn();
