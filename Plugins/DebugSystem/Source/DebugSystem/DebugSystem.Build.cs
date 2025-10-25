@@ -40,7 +40,8 @@ public class DebugSystem : ModuleRules
 				"Slate",
 				"SlateCore", 
 				"GameplayAbilities",
-				"GameplayTasks"
+				"GameplayTasks",
+				"MotionWarping"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
