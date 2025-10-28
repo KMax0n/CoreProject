@@ -12,7 +12,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnPlayMontageNotifyDelegate, FName,
 class UAnimMontage;
 
 UCLASS()
-class DEBUGSYSTEM_API UAbilityTask_PlayMontageAndWaitNotify : public UAbilityTask_PlayMontageAndWait
+class CORESYSTEMS_API UAbilityTask_PlayMontageAndWaitNotify : public UAbilityTask_PlayMontageAndWait
 {
 	GENERATED_BODY()
 	

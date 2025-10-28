@@ -10,7 +10,7 @@
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnUpdateTargetSignature, const FName&, WarpTargetName);
 
 UCLASS(Blueprintable, ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
-class DEBUGSYSTEM_API UCore_MotionWarpingComponent : public UMotionWarpingComponent
+class CORESYSTEMS_API UCore_MotionWarpingComponent : public UMotionWarpingComponent
 {
 	GENERATED_BODY()
 

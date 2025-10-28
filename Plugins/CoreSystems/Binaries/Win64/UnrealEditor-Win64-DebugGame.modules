@@ -1,0 +1,8 @@
+{
+	"BuildId": "37670630",
+	"Modules": 
+	{
+		"CoreSystems": "UnrealEditor-CoreSystems-Win64-DebugGame.dll",
+		"DebugSystem": "UnrealEditor-DebugSystem-Win64-DebugGame.dll"
+	}
+}
