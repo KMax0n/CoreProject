@@ -10,6 +10,7 @@ ACoreCharacter::ACoreCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 
 	MotionWarpingComponent = CreateDefaultSubobject<UCore_MotionWarpingComponent>(TEXT("MotionWarpingComponent"));
+	TeamComponent = CreateDefaultSubobject<UTeamComponent>(TEXT("TeamComponent"));
 }
 
 // Called when the game starts or when spawned

@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "CoreSystems/MotionWarping/Core_MotionWarpingComponent.h"
 #include "GenericTeamAgentInterface.h"
+#include "CoreSystems/Teams/TeamComponent.h"
 
 #include "CoreCharacter.generated.h"
 
@@ -30,12 +31,15 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	//Teams
-	UFUNCTION(BlueprintCallable, Category = "Characters")
+	UFUNCTION(BlueprintCallable, Blueprintable, Category = "Characters")
 	virtual void SetGenericTeamId(const FGenericTeamId& TeamID) override;
 
-	UFUNCTION(BlueprintCallable, Category = "Characters")
+	UFUNCTION(BlueprintCallable, Blueprintable, Category = "Characters")
 	virtual FGenericTeamId GetGenericTeamId() const override;
 	
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 	UCore_MotionWarpingComponent* MotionWarpingComponent;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UTeamComponent* TeamComponent;
 };
