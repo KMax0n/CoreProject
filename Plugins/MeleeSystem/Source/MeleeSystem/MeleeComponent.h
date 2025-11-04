@@ -9,6 +9,7 @@
 #include "MeleeComponent.generated.h"
 
 class UInstancedEvaluator_MeleeTarget;
+class UInstancedEvaluator;
 
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent), Blueprintable, BlueprintType)
@@ -52,8 +53,8 @@ protected:
 	TArray<AActor*> TargetCandidates;
 
 public:
-	UPROPERTY(EditDefaultsOnly, Category = "Target")
-	TArray<UInstancedEvaluator_MeleeTarget*> TargetEvaluators;	
+	UPROPERTY(EditAnywhere, Category = "Target")
+	TArray<UInstancedEvaluator_MeleeTarget*> TargetEvaluators;
 
 public:
 	UPROPERTY(BlueprintReadOnly)

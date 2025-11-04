@@ -12,8 +12,6 @@ UMeleeComponent::UMeleeComponent()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
 }
 
 
@@ -62,7 +60,7 @@ void UMeleeComponent::UpdateCurrentTarget()
 		
 		for (auto* Evaluator : TargetEvaluators)
 		{
-			if (Evaluator->bEnable)
+			if (Evaluator && Evaluator->bEnable)
 			{
 				float Score = Evaluator->Evaluate(GetOwner(), CurCandidate);
 

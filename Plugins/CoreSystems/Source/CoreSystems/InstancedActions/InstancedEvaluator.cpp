@@ -9,6 +9,7 @@ UInstancedEvaluator::UInstancedEvaluator()
 
 float UInstancedEvaluator::Evaluate(AActor* ContextActor)
 {
+	Context = ContextActor;
 	const float Score = K2_Evaluate();
 	UE_LOG(LogInstancedActions, Log, TEXT("UInstancedEvaluator::Evaluation score = %f"), Score);
 	return Score;

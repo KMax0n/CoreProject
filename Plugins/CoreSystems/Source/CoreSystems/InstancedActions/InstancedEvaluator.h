@@ -8,7 +8,7 @@
 
 #include "InstancedEvaluator.generated.h"
 
-UCLASS(DefaultToInstanced, Blueprintable)
+UCLASS(DefaultToInstanced, EditInlineNew, Blueprintable, BlueprintType)
 class CORESYSTEMS_API UInstancedEvaluator : public UObject
 {
 	GENERATED_BODY()
