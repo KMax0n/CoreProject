@@ -3,6 +3,8 @@
 
 #include "MeleeComponent.h"
 
+#include "InstancedActions/Evaluators/InstancedEvaluator_MeleeTarget.h"
+
 
 // Sets default values for this component's properties
 UMeleeComponent::UMeleeComponent()
@@ -42,4 +44,51 @@ void UMeleeComponent::SetCurrentAction(EActionType NewAction, EZone NewZone)
 void UMeleeComponent::SetCurrentZone(EZone NewZone)
 {
 	CurrentZone = NewZone;
+}
+
+void UMeleeComponent::SetCurrentTarget(AActor* NewTarget)
+{
+	CurrentTarget = NewTarget;
+}
+
+void UMeleeComponent::UpdateCurrentTarget()
+{
+	AActor* BestCandidate = nullptr;
+	float BestScore = -1.f;
+	
+	for (const auto CurCandidate : TargetCandidates)
+	{
+		float CurScore = 0.f;
+		
+		for (auto* Evaluator : TargetEvaluators)
+		{
+			if (Evaluator->bEnable)
+			{
+				float Score = Evaluator->Evaluate(GetOwner(), CurCandidate);
+
+				switch (Evaluator->EvaluationMode)
+				{
+					case EEnumEvaluationMode::Multiply:
+						CurScore *= Score;
+						break;
+					case EEnumEvaluationMode::Add:
+						CurScore += Score;
+						break;
+					case EEnumEvaluationMode::Override:
+						CurScore = Score;
+						break;
+					default:
+						break;
+				}
+			}
+		}
+
+		if (CurScore > BestScore)
+		{
+			BestScore = CurScore;
+			BestCandidate = CurCandidate;
+		}
+	}
+
+	CurrentTarget = BestCandidate;
 }

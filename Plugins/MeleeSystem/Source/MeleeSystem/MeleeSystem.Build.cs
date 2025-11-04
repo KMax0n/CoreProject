@@ -20,7 +20,8 @@ public class MeleeSystem : ModuleRules
 				"CoreUObject",
 				"Engine",
 				"Slate",
-				"SlateCore"
+				"SlateCore",
+				"CoreSystems"
 			}
 		);
 	}
