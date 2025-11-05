@@ -8238,18 +8238,6 @@
 			"Type": "RequiredResource"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/DebugSystem/Binaries/Win64/UnrealEditor-DebugSystem.dll",
-			"Type": "DynamicLibrary"
-		},
-		{
-			"Path": "$(ProjectDir)/Plugins/DebugSystem/Binaries/Win64/UnrealEditor-DebugSystem.pdb",
-			"Type": "SymbolFile"
-		},
-		{
-			"Path": "$(ProjectDir)/Plugins/DebugSystem/Binaries/Win64/UnrealEditor.modules",
-			"Type": "RequiredResource"
-		},
-		{
 			"Path": "$(ProjectDir)/Plugins/HealthSystem/Binaries/Win64/UnrealEditor-HealthSystem.dll",
 			"Type": "DynamicLibrary"
 		},
@@ -34064,10 +34052,6 @@
 			"Type": "UFS"
 		},
 		{
-			"Path": "$(ProjectDir)/Plugins/DebugSystem/DebugSystem.uplugin",
-			"Type": "UFS"
-		},
-		{
 			"Path": "$(ProjectDir)/Plugins/HealthSystem/HealthSystem.uplugin",
 			"Type": "UFS"
 		},
@@ -34153,7 +34137,6 @@
 		"DataValidation",
 		"Dataflow",
 		"DatasmithContent",
-		"DebugSystem",
 		"DeformerGraph",
 		"DumpGPUServices",
 		"EOSShared",

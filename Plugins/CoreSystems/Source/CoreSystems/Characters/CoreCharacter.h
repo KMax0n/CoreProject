@@ -3,15 +3,18 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "GameplayTagAssetInterface.h"
 #include "GameFramework/Character.h"
 #include "CoreSystems/MotionWarping/Core_MotionWarpingComponent.h"
 #include "GenericTeamAgentInterface.h"
 #include "CoreSystems/Teams/TeamComponent.h"
+#include "AbilitySystemComponent.h"
 
 #include "CoreCharacter.generated.h"
 
+
 UCLASS(Blueprintable, BlueprintType)
-class CORESYSTEMS_API ACoreCharacter : public ACharacter, public IGenericTeamAgentInterface
+class CORESYSTEMS_API ACoreCharacter : public ACharacter, public IGenericTeamAgentInterface, public IGameplayTagAssetInterface
 {
 	GENERATED_BODY()
 
@@ -30,16 +33,26 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+public:
+	// IGameplayTagAssetInterface interface.
+	 virtual bool HasMatchingGameplayTag(FGameplayTag TagToCheck) const override;
+	 virtual bool HasAnyMatchingGameplayTags(const FGameplayTagContainer& TagContainer) const override;
+	 virtual bool HasAllMatchingGameplayTags(const FGameplayTagContainer& TagContainer) const override;
+	 virtual void GetOwnedGameplayTags(FGameplayTagContainer& TagContainer) const override;
+	
 	//Teams
 	UFUNCTION(BlueprintCallable, Blueprintable, Category = "Characters")
 	virtual void SetGenericTeamId(const FGenericTeamId& TeamID) override;
 
 	UFUNCTION(BlueprintCallable, Blueprintable, Category = "Characters")
 	virtual FGenericTeamId GetGenericTeamId() const override;
-	
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UCore_MotionWarpingComponent* MotionWarpingComponent;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UTeamComponent* TeamComponent;
+	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	TObjectPtr<UCore_MotionWarpingComponent> MotionWarpingComponent;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	TObjectPtr<UTeamComponent> TeamComponent;
 };

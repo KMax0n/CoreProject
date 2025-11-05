@@ -25,7 +25,7 @@ public class CoreSystems : ModuleRules
 		PublicDependencyModuleNames.AddRange(
 			new string[]
 			{
-				"Core",
+				"Core"
 				//"Engine",
 				// ... add other public dependencies that you statically link with here ...
 			}
@@ -42,7 +42,8 @@ public class CoreSystems : ModuleRules
 				"GameplayAbilities",
 				"GameplayTasks",
 				"MotionWarping",
-				"AIModule"
+				"AIModule",
+				"GameplayTags"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);

@@ -53,7 +53,7 @@ protected:
 	TArray<AActor*> TargetCandidates;
 
 public:
-	UPROPERTY(EditAnywhere, Category = "Target")
+	UPROPERTY(EditDefaultsOnly, Category = "Target")
 	TArray<UInstancedEvaluator_MeleeTarget*> TargetEvaluators;
 
 public:

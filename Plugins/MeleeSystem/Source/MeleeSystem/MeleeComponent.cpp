@@ -52,11 +52,11 @@ void UMeleeComponent::SetCurrentTarget(AActor* NewTarget)
 void UMeleeComponent::UpdateCurrentTarget()
 {
 	AActor* BestCandidate = nullptr;
-	float BestScore = -1.f;
+	float BestScore = -0.f;
 	
 	for (const auto CurCandidate : TargetCandidates)
 	{
-		float CurScore = 0.f;
+		float CurScore = -0.f;
 		
 		for (auto* Evaluator : TargetEvaluators)
 		{
