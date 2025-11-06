@@ -29,6 +29,10 @@
 		{
 			"Name": "DebugSystem",
 			"Enabled": false
+		},
+		{
+			"Name": "Chooser",
+			"Enabled": true
 		}
 	]
 }
