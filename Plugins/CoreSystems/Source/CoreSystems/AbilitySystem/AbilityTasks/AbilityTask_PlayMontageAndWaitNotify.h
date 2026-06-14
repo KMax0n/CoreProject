@@ -17,7 +17,7 @@ class CORESYSTEMS_API UAbilityTask_PlayMontageAndWaitNotify : public UAbilityTas
 	GENERATED_BODY()
 	
 public:
-	UFUNCTION(BlueprintCallable, meta = (DisplayName="PlayMOntageAndWaitNotify", /*HidePin = "OwningAbility", */DefaultToSelf = "OwningAbility", BlueprintInternalUseOnly = "TRUE"))
+	UFUNCTION(BlueprintCallable, meta = (DisplayName="PlayMontageAndWaitNotify", /*HidePin = "OwningAbility", */DefaultToSelf = "OwningAbility", BlueprintInternalUseOnly = "TRUE"))
 	static UAbilityTask_PlayMontageAndWaitNotify* PlayMontageAndWaitNotifyProxy(UGameplayAbility* OwningAbility,
 		FName InTaskInstanceName, UAnimMontage* InMontageToPlay, float InRate = 1.f, FName InStartSection = NAME_None,
 		bool InStopWhenAbilityEnds = true, float InAnimRootMotionTranslationScale = 1.f, float InStartTimeSeconds = 0.f,

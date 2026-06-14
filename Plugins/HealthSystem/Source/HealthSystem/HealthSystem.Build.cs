@@ -20,7 +20,8 @@ public class HealthSystem : ModuleRules
                 "CoreUObject",
                 "Engine",
                 "Slate",
-                "SlateCore"
+                "SlateCore", 
+                "GameplayAbilities"
             }
         );
     }

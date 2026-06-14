@@ -8,6 +8,7 @@ UCoreGameplayAbility::UCoreGameplayAbility()
 {
 	bTickOnlyWhileActive = true;
 	AbilityTickInterval = 0.0f;
+	InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerActor; 
 }
 
 void UCoreGameplayAbility::RunTickTask()

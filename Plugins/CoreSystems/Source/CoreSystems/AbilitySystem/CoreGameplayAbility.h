@@ -10,9 +10,6 @@
 
 DECLARE_LOG_CATEGORY_EXTERN(LogCoreAbilitySystem, Log, All);
 
-/**
- * 
- */
 UCLASS()
 class CORESYSTEMS_API UCoreGameplayAbility : public UGameplayAbility
 {

@@ -7,9 +7,9 @@
 
 UAnimNotifyState_MeleeHit::UAnimNotifyState_MeleeHit()
 {
-	NotifyColor = FColor::Red;
-
-	
+#if WITH_EDITORONLY_DATA
+	UAnimNotifyState::NotifyColor = FColor::Red;
+#endif // WITH_EDITORONLY_DATA
 }
 
 void UAnimNotifyState_MeleeHit::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference)
