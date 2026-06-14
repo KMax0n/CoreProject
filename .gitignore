@@ -1,6 +1,7 @@
 # UnrealEngine files to ignore
-Intermediate
-Saved
+Intermediate/
+Saved/
+DerivedDataCache/
 
 # solution files to ignore
 *.sln
